@@ -1,0 +1,117 @@
+{
+    "ignorePatterns": [
+        "temp.js",
+        "**/stories/**"
+    ],
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react-hooks/recommended",
+        "prettier/prettier",
+        "plugin:prettier/recommended",
+        "plugin:jsx-a11y/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "react-hooks"
+    ],
+    "rules": {
+        "no-console": "off",
+        "no-tabs": 0,
+        "react/function-component-definition": "off",
+        "no-use-before-define": "off",
+        "react/jsx-props-no-spreading": "off",
+        "@typescript-eslint/no-use-before-define": [
+            "error"
+        ],
+        "prettier/prettier": [
+            "error"
+        ],
+        "react/require-default-props": [
+            0
+        ],
+        "jsx-a11y/label-has-for": [
+            2,
+            {
+                "components": [],
+                "required": {
+                    "every": [
+                        "nesting",
+                        "id"
+                    ]
+                },
+                "allowChildren": true
+            }
+        ],
+        "react/jsx-filename-extension": [
+            "warn",
+            {
+                "extensions": [
+                    ".tsx"
+                ]
+            }
+        ],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": [
+            "error"
+        ],
+        "@typescript-eslint/explicit-function-return-type": [
+            "error",
+            {
+                "allowExpressions": true
+            }
+        ],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "import/prefer-default-export": "off",
+        "react/prop-types": "off",
+        "no-param-reassign": "off",
+        "react/jsx-wrap-multilines": [
+            "warn",
+            {
+                "declaration": "parens",
+                "assignment": "parens",
+                "return": "parens",
+                "arrow": "parens",
+                "condition": "ignore",
+                "logical": "ignore",
+                "prop": "ignore"
+            }
+        ]
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".ts",
+                    ".tsx",
+                    ".js",
+                    ".jsx"
+                ]
+            },
+            "typescript": {}
+        }
+    }
+}
